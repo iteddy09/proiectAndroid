@@ -12,5 +12,13 @@
     <string name="penaltiesTable">Tabel penlizari traseu</string>
     <string name="aboutUs">Despre aplicatie</string>
     <string name="aboutUsText">Versiune aplicatie: 0.1\nData release: 07.12.2014\n\nAutori aplicatie:\nIris Teddy Cristian\nJernoiu Iosif\nMaftei Paul\n</string>
+    <string name="remaining">"Ramase: "</string>
+    <string name="timeRemaning">"Timp: "</string>
+    <string name="wrongAnswers">Gresite</string>
+    <string name="answerLater">Raspund mai tarziu</string>
+    <string name="sendAnswer">Trimite Raspuns</string>
+    <string name="title_activity_about_application">AboutApplication</string>
+    <string name="title_activity_statistics">StatisticsActivity</string>
+    <string name="statisticsSummary">grafic nr chestionare respins/total pe zile</string>
 
 </resources>
