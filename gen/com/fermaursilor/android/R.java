@@ -27,30 +27,41 @@ public final class R {
         public static final int b=0x7f020001;
         public static final int c=0x7f020002;
         public static final int ic_launcher=0x7f020003;
+        public static final int img_test=0x7f020004;
     }
     public static final class id {
-        public static final int TextViewTabel_Text=0x7f09000a;
-        public static final int TextViewTabel_Valoare=0x7f09000b;
-        public static final int aboutApplication=0x7f09000d;
+        public static final int TextViewTabel_Text=0x7f090013;
+        public static final int TextViewTabel_Valoare=0x7f090014;
+        public static final int aboutApplication=0x7f090016;
         public static final int button1=0x7f090002;
         public static final int button2=0x7f090003;
         public static final int button3=0x7f090004;
         public static final int button4=0x7f090005;
         public static final int editText1=0x7f090006;
+        public static final int img=0x7f090009;
+        public static final int intrb=0x7f090000;
         public static final int listView1=0x7f090007;
-        public static final int statistics=0x7f09000c;
-        public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090001;
-        public static final int textView3=0x7f090009;
-        public static final int textViewLeaveRemainingDescription=0x7f090008;
+        public static final int question=0x7f090008;
+        public static final int questionLw=0x7f090010;
+        public static final int r1=0x7f090001;
+        public static final int r2=0x7f09000a;
+        public static final int r3=0x7f09000b;
+        public static final int respondLater=0x7f090011;
+        public static final int sendAnswer=0x7f090012;
+        public static final int statistics=0x7f090015;
+        public static final int textViewLeaveRemainingDescription=0x7f09000c;
+        public static final int textViewRemaining=0x7f09000d;
+        public static final int textViewTime=0x7f09000f;
+        public static final int textViewWrong=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_statistics=0x7f030000;
         public static final int layout_about_app=0x7f030001;
         public static final int layout_main_activity=0x7f030002;
         public static final int layout_penalties=0x7f030003;
-        public static final int layout_quiz=0x7f030004;
-        public static final int layout_table_row=0x7f030005;
+        public static final int layout_question=0x7f030004;
+        public static final int layout_quiz=0x7f030005;
+        public static final int layout_table_row=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;

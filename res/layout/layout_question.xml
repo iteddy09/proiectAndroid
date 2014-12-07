@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="1" 
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_test" />
+
+    <TextView
+        android:id="@+id/intrb"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_row="1"
+        android:text="djsakljdslakdjsakldjsakljdsalksdjaldksjaklda"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/r1"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|top|left"
+        android:layout_marginBottom="10dp"
+        android:layout_row="2"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/r2"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|top|left"
+        android:layout_marginBottom="10dp"
+        android:layout_row="3"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/r3"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|top|left"
+        android:layout_row="4"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</GridLayout>
