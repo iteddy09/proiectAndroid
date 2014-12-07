@@ -13,7 +13,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
 	Button chestionarA,chestionarB,chestionarC,tabelPenalizari ;
-	
+	Button butonPenalties;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,19 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		};
+
+        butonPenalties = (Button)findViewById(R.id.button4);
+        butonPenalties.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                
+                Intent intent = new Intent(getApplicationContext(), PenaltiesActivity.class);
+                startActivity(intent);
+                
+                
+            }
+        });
         
 		chestionarA.setOnClickListener(action);
         chestionarB.setOnClickListener(action);
