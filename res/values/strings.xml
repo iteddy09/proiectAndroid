@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Chestionare Auto</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="application_title">Chestionare Auto</string>
+    <string name="quizA">Chestionar A</string>
+    <string name="quizB">Chestionar B</string>
+    <string name="quizC">Chestionar C</string>
+    <string name="statistics">Statistici</string>
+    <string name="penaltiesTable">Tabel penlizari traseu</string>
+    <string name="aboutUs">Despre aplicatie</string>
+    <string name="aboutUsText">Versiune aplicatie: 0.1\nData release: 07.12.2014\n\nAutori aplicatie:\nIris Teddy Cristian\nJernoiu Iosif\nMaftei Paul\n</string>
+
+</resources>
