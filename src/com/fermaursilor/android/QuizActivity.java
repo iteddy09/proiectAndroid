@@ -6,8 +6,10 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.R.color;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,6 +17,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 
 import com.fermaursilor.model.Question;
@@ -27,8 +33,15 @@ public class QuizActivity extends Activity {
 	private List<Question> quiz;
 	private ListView listView;
 	private Integer questionNumber = 0;
+	private Integer chosenAnswer = 0;
+	
+	private OnClickListener sendAnswerListner,nextQuestionListener;
+	
+ 
 	
 	Button answerLater, sendAnswer;
+	
+	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +50,8 @@ public class QuizActivity extends Activity {
          
         listView = (ListView) findViewById(R.id.questionLw);
         
+       
+		
         QuizDataSource getQuiz = new QuizDataSource(this);
         getQuiz.start();
         
@@ -54,9 +69,64 @@ public class QuizActivity extends Activity {
 			}
 		});
         
+        sendAnswerListner = new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				sendAnswer();
+			}
+		};
+		nextQuestionListener = new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				clearButton();
+				
+				loadQuestionOnView(++questionNumber);
+				sendAnswer.setOnClickListener(sendAnswerListner);
+			}
+		};
+        sendAnswer.setOnClickListener(sendAnswerListner);
         Log.i("APLICATIE","S-a incarcat");
     }
+    
+    public void modifySelectedAnswers(CheckBox r1, CheckBox r2, CheckBox r3){
+    	chosenAnswer =0;
+    	if(r1.isChecked()) chosenAnswer+=100;
+    	if(r2.isChecked()) chosenAnswer+=10;
+    	if(r3.isChecked()) chosenAnswer+=1;
+    }
 
+    public void clearButton(){
+    	sendAnswer.setText(R.string.sendAnswer);
+    	sendAnswer.setBackgroundColor(color.background_dark);
+    }
+    
+    public void sendAnswer(){
+    	if(chosenAnswer.equals(0)){
+    		Toast.makeText(this, "Va rugam alegeti un raspuns.", Toast.LENGTH_SHORT).show();
+    	}else{
+
+    		Question question = quiz.get(questionNumber);
+    		if(question.isCorrect(chosenAnswer)){
+    			sendAnswer.setText("Corect: "+question.getCorrectAnswerString()+" >");
+    			sendAnswer.setBackgroundColor(Color.GREEN);
+    		}else{
+    			sendAnswer.setText("Gresit: "+question.getCorrectAnswerString()+" >");
+    			sendAnswer.setBackgroundColor(Color.RED);
+    		}
+    		
+    		updateTopStats();
+    		
+    		sendAnswer.setOnClickListener(nextQuestionListener);
+    	}
+    }
+    
+    public void updateTopStats(){
+    	
+    }
+    
     public void onQuizResponse(JSONArray jsonQuiz){
     	Log.i("QUIZ ", "RETREIVED "+jsonQuiz.length()+"");
     	
@@ -68,7 +138,7 @@ public class QuizActivity extends Activity {
 				String r1= question.getString("r1");
 				String r2= question.getString("r2");
 				String r3= question.getString("r3");
-				String rc= question.getString("rc");
+				int rc= question.getInt("rc");
 				String img= question.getString("img");
 				
 				Question q = new Question(intrb, r1, r2, r3, img, rc);
@@ -85,8 +155,12 @@ public class QuizActivity extends Activity {
     }
 
     public void loadQuestionOnView(int index){
+    	chosenAnswer=0;
+    	
     	questionAdapter adaptor = new questionAdapter(this, quiz.get(index));
 		listView.setAdapter(adaptor);
+		
+		
     }
     
     @Override
