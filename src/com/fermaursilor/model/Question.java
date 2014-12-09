@@ -1,12 +1,16 @@
 package com.fermaursilor.model;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+
 public class Question {
 	
 	public String question;
 	public String answer1;
 	public String answer2;
 	public String answer3;
-	private String imageUrl;
+	public String imageUrl;
+	
 	private String rightAnswers;
 	
 	public Question(String question,String answer1,String answer2,String answer3,String imageUrl,String rightAnswers){
@@ -15,7 +19,10 @@ public class Question {
 		this.answer2=answer2;
 		this.answer3=answer3;
 		
+
 		this.imageUrl= imageUrl;
 		this.rightAnswers=rightAnswers;
 	}		
+	
+ 
 }

@@ -54,6 +54,14 @@ public class questionAdapter extends BaseAdapter {
         CheckBox r2= (CheckBox) rowView.findViewById(R.id.r2);
         CheckBox r3= (CheckBox) rowView.findViewById(R.id.r3);
         
+        if(!q.imageUrl.isEmpty()){
+        	int id =context.getResources().getIdentifier("question_img_"+q.imageUrl, "drawable", context.getPackageName());
+        	img.setImageResource(id);
+        	img.setVisibility(View.VISIBLE);
+        }else{
+        	img.setVisibility(View.GONE);
+        }
+        
         intrb.setText(q.question);
         r1.setText(q.answer1);
         r2.setText(q.answer2);
