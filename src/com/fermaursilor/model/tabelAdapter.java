@@ -69,25 +69,26 @@ import com.fermaursilor.android.R;
 	        View rowView;        
 	             rowView = inflater.inflate(R.layout.layout_table_row, null);
 	             holder.tvText=(TextView) rowView.findViewById(R.id.TextViewTabel_Text);
-	             holder.tvVal = (TextView) rowView.findViewById(R.id.TextViewTabel_Valoare);
+	             //holder.tvVal = (TextView) rowView.findViewById(R.id.TextViewTabel_Valoare);
 	             
 	             
 	         int Valoare = Integer.valueOf(listaValori.get(position));
 	         if(Valoare==0)
 	        	 {
 	        	 
-	        	 	holder.tvText.setTextSize(18);
-	        	 	holder.tvText.setTextColor(Color.BLUE);
+	        	 	holder.tvText.setTextSize(19);
+	        	 	holder.tvText.setTextColor(Color.rgb(123, 143, 197));
 	        	 	holder.tvText.setText(listaTexte.get(position));
-	        	 	holder.tvVal.setVisibility(View.GONE);
+	        	 	//holder.tvVal.setVisibility(View.GONE);
 	        	 }
 	         else
 	         	{
 	        	 	holder.tvText.setTextSize(15);
-	        	 	holder.tvText.setText(listaTexte.get(position));
-	        	 	holder.tvVal.setTextSize(18);
-	        	 	holder.tvVal.setTextColor(Color.RED);
-	        	 	holder.tvVal.setText(listaValori.get(position));
+	        	 	holder.tvText.setText(listaTexte.get(position)+" - "+listaValori.get(position)+" puncte");
+	        	 	//.tvVal.setTextSize(23);
+	        	 	//holder.tvVal.setTextColor(Color.RED);
+	        	  
+	        	 	//holder.tvVal.setText(listaValori.get(position));
 	        	 }
 	         
 	         

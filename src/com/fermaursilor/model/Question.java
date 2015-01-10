@@ -26,7 +26,7 @@ public class Question {
 	}		
 	
 	
-	public boolean isCorrect(Integer answeredCode){
+	public boolean answer(Integer answeredCode){
 		this.chosenAnswer = answeredCode;
 		
 		if(correctAnswer.equals(answeredCode))
@@ -36,7 +36,7 @@ public class Question {
 	}
 	
 	public boolean correctAnswered(){
-		return isCorrect(chosenAnswer);
+		return answer(chosenAnswer);
 	}
 	
 	public String getCorrectAnswerString(){

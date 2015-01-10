@@ -8,50 +8,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.fermaursilor.android.MainActivity" >
 
+      <ImageView
+          android:id="@+id/wheelImage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/steering_wheel" />
+      
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/intrb"
+        android:layout_below="@+id/wheelImage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="26dp"
         android:text="@string/quizA" />
-
-    <TextView
-        android:id="@+id/intrb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/application_title"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+       
         android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:text="@string/quizB" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
+  
         android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:text="@string/quizC" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/penaltiesTable" />
+
+    <TextView
+        android:id="@+id/textViewLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_version"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
     
 </RelativeLayout>

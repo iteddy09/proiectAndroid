@@ -17,15 +17,6 @@
         
         android:text="tv1" />
 
-    <TextView
-        android:id="@+id/TextViewTabel_Valoare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
- 		android:layout_row="0"
-     	android:layout_column="1"
-        android:text="tv2" 
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="8dp"
-        />
+
     
 </GridLayout>

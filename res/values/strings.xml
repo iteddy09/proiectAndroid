@@ -13,12 +13,17 @@
     <string name="aboutUs">Despre aplicatie</string>
     <string name="aboutUsText">Versiune aplicatie: 0.1\nData release: 07.12.2014\n\nAutori aplicatie:\nIris Teddy Cristian\nJernoiu Iosif\nMaftei Paul\n</string>
     <string name="remaining">"Ramase: "</string>
-    <string name="timeRemaning">"Timp: "</string>
-    <string name="wrongAnswers">Gresite</string>
+    <string name="timeRemaning">"Timp:"</string>
+    <string name="wrongAnswers">Gresite:</string>
     <string name="answerLater">Raspund mai tarziu</string>
     <string name="sendAnswer">Trimite Raspuns</string>
     <string name="title_activity_about_application">AboutApplication</string>
     <string name="title_activity_statistics">StatisticsActivity</string>
     <string name="statisticsSummary">grafic nr chestionare respins/total pe zile</string>
-
+	<string name="select_answer">Va rugam alegeti un raspuns.</string>
+	<string name="correct_answer">Correct: </string>
+	<string name="wrong_answer">Gresit: </string>
+	<string name="app_version">versiune: 1.0</string>
+	<string name="max_pentalties_points">La 21 puncte de penalizare sunteti respins la proba de condus.</string>
+	<string name="loading_quiz">Descarcare Quiz..</string>
 </resources>
